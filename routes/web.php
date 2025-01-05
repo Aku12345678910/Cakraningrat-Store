@@ -14,5 +14,7 @@ use App\Http\Controllers\StoreController; // Import StoreController
 |
 */
 
-Route::get('/', [StoreController::class, 'index']);
+Route::get('/', function () {
+    return view ('index');
+});
 
