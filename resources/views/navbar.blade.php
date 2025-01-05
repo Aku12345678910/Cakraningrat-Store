@@ -8,13 +8,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item me-4">
-            <a class="nav-link" href="index.php">Home</a>
+            <a class="nav-link" href="{{ route('index') }}">Home</a>
         </li>
         <li class="nav-item me-4">
-            <a class="nav-link" href="produk.php">Produk</a>
+            <a class="nav-link" href="{{ url('produk') }}">Produk</a>
         </li>
         <li class="nav-item me-4">
-            <a class="nav-link" href="tentang.php">About Us</a>
+            <a class="nav-link" href="{{ url('tentang') }}">About Us</a>
         </li>
       </ul>
     </div>

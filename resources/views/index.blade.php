@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cakraningrat Store</title>
-    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="{{ asset('CSS/style.css') }}">
-</head>
-<body>
-    @include('navbar')
+@extends('layouts.app')
 
+@section('title', 'Cakraningrat Store')
+
+@section('content')
     <div class="container-fluid banner">
         <img src="{{ asset('image/banner.png') }}" alt="banner" class="background-image">
         <div class="container text-center text-white content">
@@ -38,7 +30,7 @@
                 </div>
                 <div class="col-4">
                     <div class="highlighted-kategori kategori-rabbani d-flex justify-content-center align-items-center">
-                        <h4 class="text-white"><a href="{{ url('produk?k ategori=rabbani') }}">RABBANI</a></h4>
+                        <h4 class="text-white"><a href="{{ url('produk?kategori=rabbani') }}">RABBANI</a></h4>
                     </div>
                 </div>
                 <div class="col-4">
@@ -91,7 +83,7 @@
                 <div class="col-sm-1 d-flex justify-content-center mb-2">
                     <i class="fab fa-facebook fs-4"></i>
                 </div>
-                <div class="col-sm-1 d-flex justify-content-center mb-2">
+                <div class="col-sm-1 d-flex justify-content <center mb-2">
                     <i class="fab fa-instagram fs-4"></i>
                 </div>
                 <div class="col-sm-1 d-flex justify-content-center mb-2">
@@ -109,7 +101,4 @@
             <label>&copy;2024 Cakraningrat Store</label>
         </div>
     </div>
-
-    <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-</body>
-</html>
+@endsection

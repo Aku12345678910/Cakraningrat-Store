@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StoreController; // Import StoreController
+use App\Http\Controllers\ProductController; // Pastikan Anda sudah membuat controller ini
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +14,18 @@ use App\Http\Controllers\StoreController; // Import StoreController
 |
 */
 
+// Route untuk halaman utama (index)
 Route::get('/', function () {
-    return view ('index');
-});
+    return view('index'); // Mengarahkan ke view index.blade.php
+})->name('home');
 
+// Route untuk halaman produk
+Route::get('/produk', [ProductController::class, 'index'])->name('produk.index');
+
+// Route untuk halaman detail produk
+Route::get('/produk-detail', [ProductController::class, 'show'])->name('produk.detail');
+
+// Route untuk halaman tentang
+Route::get('/tentang', function () {
+    return view('tentang'); // Mengarahkan ke view tentang.blade.php
+})->name('tentang');
